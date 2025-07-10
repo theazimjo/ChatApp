@@ -1,6 +1,7 @@
 package abc.uits.myapplication.navigation
 
 import abc.uits.myapplication.screens.auth.LoginScreen
+import abc.uits.myapplication.screens.auth.RegisterScreen
 import abc.uits.myapplication.screens.splash.SplashScreen
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavController
@@ -15,7 +16,10 @@ fun AppNav(navController: NavHostController) {
             SplashScreen(navController)
         }
         composable("login") {
-            LoginScreen()
+            LoginScreen(navController)
+        }
+        composable("register") {
+            RegisterScreen(navController)
         }
     }
 }
